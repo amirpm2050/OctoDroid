@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.9 on darwin)" generated="20220618 18:25:05.331" rpa="false" schemaversion="2">
+<suite id="s1" name="OctoDroid" source="/Users/amir/Downloads/OctoDroid">
+<suite id="s1-s1" name="Test" source="/Users/amir/Downloads/OctoDroid/Test">
+<suite id="s1-s1-s1" name="Issue" source="/Users/amir/Downloads/OctoDroid/Test/Issue.robot">
+<test id="s1-s1-s1-t1" name="create_issue_and_close">
+<kw name="Open Application" library="OctoDriodGeneric" type="SETUP">
+<status status="PASS" starttime="20220618 18:25:05.433" endtime="20220618 18:25:27.085"/>
+</kw>
+<kw name="Check User Is Loged In" library="OctoDriodGeneric">
+<status status="PASS" starttime="20220618 18:25:27.087" endtime="20220618 18:25:43.596"/>
+</kw>
+<kw name="Is In Main Page" library="OctoDriodGeneric">
+<var>${is_in_main_page}</var>
+<msg timestamp="20220618 18:25:43.999" level="INFO">${is_in_main_page} = True</msg>
+<status status="PASS" starttime="20220618 18:25:43.597" endtime="20220618 18:25:44.000"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${is_in_main_page}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220618 18:25:44.000" endtime="20220618 18:25:44.002"/>
+</kw>
+<kw name="Open Search Menu" library="SideMenu">
+<status status="PASS" starttime="20220618 18:25:44.002" endtime="20220618 18:25:45.740"/>
+</kw>
+<kw name="Search Project And Open" library="Search">
+<arg>project_name=cafebazaar/AdContainer</arg>
+<status status="PASS" starttime="20220618 18:25:45.741" endtime="20220618 18:25:53.415"/>
+</kw>
+<kw name="Click On Issue In Project" library="Issue">
+<status status="PASS" starttime="20220618 18:25:53.415" endtime="20220618 18:25:53.650"/>
+</kw>
+<kw name="Open New Issue Page" library="Issue">
+<status status="PASS" starttime="20220618 18:25:53.650" endtime="20220618 18:25:54.834"/>
+</kw>
+<kw name="Add Issue From Search" library="Issue">
+<arg>title=issueForTest1</arg>
+<arg>desc=description for test2</arg>
+<status status="PASS" starttime="20220618 18:25:54.834" endtime="20220618 18:26:10.682"/>
+</kw>
+<kw name="Is Issue Added" library="Issue">
+<var>${is_issue_added}</var>
+<msg timestamp="20220618 18:26:13.784" level="INFO">${is_issue_added} = True</msg>
+<status status="PASS" starttime="20220618 18:26:10.682" endtime="20220618 18:26:13.784"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${is_issue_added}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220618 18:26:13.784" endtime="20220618 18:26:13.784"/>
+</kw>
+<kw name="Close Issue" library="Issue">
+<status status="PASS" starttime="20220618 18:26:13.784" endtime="20220618 18:26:18.832"/>
+</kw>
+<kw name="Check Issue Is Close" library="Issue">
+<var>${is_issue_closed}</var>
+<msg timestamp="20220618 18:26:22.437" level="INFO">${is_issue_closed} = True</msg>
+<status status="PASS" starttime="20220618 18:26:18.832" endtime="20220618 18:26:22.437"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${is_issue_closed}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220618 18:26:22.438" endtime="20220618 18:26:22.439"/>
+</kw>
+<kw name="Close Application" library="OctoDriodGeneric" type="TEARDOWN">
+<status status="PASS" starttime="20220618 18:26:22.440" endtime="20220618 18:26:23.077"/>
+</kw>
+<tag>createIssue</tag>
+<status status="PASS" starttime="20220618 18:25:05.432" endtime="20220618 18:26:23.078"/>
+</test>
+<test id="s1-s1-s1-t2" name="add comment to issue">
+<kw name="Open Application" library="OctoDriodGeneric" type="SETUP">
+<status status="PASS" starttime="20220618 18:26:23.080" endtime="20220618 18:26:32.286"/>
+</kw>
+<kw name="Check User Is Loged In" library="OctoDriodGeneric">
+<status status="PASS" starttime="20220618 18:26:32.286" endtime="20220618 18:26:42.623"/>
+</kw>
+<kw name="Is In Main Page" library="OctoDriodGeneric">
+<var>${is_in_main_page}</var>
+<msg timestamp="20220618 18:26:42.822" level="INFO">${is_in_main_page} = True</msg>
+<status status="PASS" starttime="20220618 18:26:42.624" endtime="20220618 18:26:42.822"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${is_in_main_page}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220618 18:26:42.822" endtime="20220618 18:26:42.823"/>
+</kw>
+<kw name="Open Search Menu" library="SideMenu">
+<status status="PASS" starttime="20220618 18:26:42.823" endtime="20220618 18:26:44.495"/>
+</kw>
+<kw name="Search Project And Open" library="Search">
+<arg>project_name=cafebazaar/AdContainer</arg>
+<status status="PASS" starttime="20220618 18:26:44.495" endtime="20220618 18:26:51.660"/>
+</kw>
+<kw name="Click On Issue In Project" library="Issue">
+<status status="PASS" starttime="20220618 18:26:51.660" endtime="20220618 18:26:51.883"/>
+</kw>
+<kw name="Scroll To Find Issue" library="Issue">
+<arg>This project seems to be outdated</arg>
+<status status="PASS" starttime="20220618 18:26:51.883" endtime="20220618 18:26:59.863"/>
+</kw>
+<kw name="Add Comment To Issue" library="Issue">
+<arg>this comment is for test</arg>
+<status status="PASS" starttime="20220618 18:26:59.864" endtime="20220618 18:27:06.457"/>
+</kw>
+<kw name="Check Comment Added" library="Issue">
+<var>${check}</var>
+<arg>this comment is for test</arg>
+<msg timestamp="20220618 18:27:09.551" level="INFO">${check} = False</msg>
+<status status="PASS" starttime="20220618 18:27:06.457" endtime="20220618 18:27:09.551"/>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<arg>${check}</arg>
+<doc>Fails if the given condition is true.</doc>
+<status status="PASS" starttime="20220618 18:27:09.552" endtime="20220618 18:27:09.553"/>
+</kw>
+<kw name="Close Application" library="OctoDriodGeneric" type="TEARDOWN">
+<status status="PASS" starttime="20220618 18:27:09.554" endtime="20220618 18:27:10.295"/>
+</kw>
+<tag>updateIssue</tag>
+<status status="PASS" starttime="20220618 18:26:23.079" endtime="20220618 18:27:10.295"/>
+</test>
+<status status="PASS" starttime="20220618 18:25:05.349" endtime="20220618 18:27:10.297"/>
+</suite>
+<suite id="s1-s1-s2" name="Open and login test" source="/Users/amir/Downloads/OctoDroid/Test/Open_and_login_test.robot">
+<test id="s1-s1-s2-t1" name="successful_login">
+<kw name="Open Application" library="OctoDriodGeneric" type="SETUP">
+<arg>full_reset=${true}</arg>
+<arg>no_reset=${false}</arg>
+<status status="PASS" starttime="20220618 18:27:10.311" endtime="20220618 18:27:31.173"/>
+</kw>
+<kw name="Login To Github" library="OctoDriodGeneric">
+<status status="PASS" starttime="20220618 18:27:31.173" endtime="20220618 18:27:39.040"/>
+</kw>
+<kw name="Is In Main Page" library="OctoDriodGeneric">
+<var>${is_in_main_page}</var>
+<msg timestamp="20220618 18:27:47.482" level="INFO">${is_in_main_page} = True</msg>
+<status status="PASS" starttime="20220618 18:27:39.041" endtime="20220618 18:27:47.482"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${is_in_main_page}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220618 18:27:47.482" endtime="20220618 18:27:47.483"/>
+</kw>
+<kw name="Logout User" library="SideMenu">
+<status status="PASS" starttime="20220618 18:27:47.484" endtime="20220618 18:27:49.569"/>
+</kw>
+<kw name="Is In Unauthrized Page" library="OctoDriodGeneric">
+<var>${is_in_login_page}</var>
+<msg timestamp="20220618 18:27:50.689" level="INFO">${is_in_login_page} = True</msg>
+<status status="PASS" starttime="20220618 18:27:49.570" endtime="20220618 18:27:50.690"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${is_in_login_page}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220618 18:27:50.690" endtime="20220618 18:27:50.692"/>
+</kw>
+<kw name="Close Application" library="OctoDriodGeneric" type="TEARDOWN">
+<status status="PASS" starttime="20220618 18:27:50.693" endtime="20220618 18:27:53.293"/>
+</kw>
+<tag>login</tag>
+<status status="PASS" starttime="20220618 18:27:10.310" endtime="20220618 18:27:53.294"/>
+</test>
+<status status="PASS" starttime="20220618 18:27:10.299" endtime="20220618 18:27:53.296"/>
+</suite>
+<status status="PASS" starttime="20220618 18:25:05.348" endtime="20220618 18:27:53.300"/>
+</suite>
+<status status="PASS" starttime="20220618 18:25:05.334" endtime="20220618 18:27:53.304"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">createIssue</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">updateIssue</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="OctoDroid">OctoDroid</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Test">OctoDroid.Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Issue">OctoDroid.Test.Issue</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2" name="Open and login test">OctoDroid.Test.Open and login test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
