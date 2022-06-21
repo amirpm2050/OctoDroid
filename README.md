@@ -1,4 +1,4 @@
-# CBProject
+# OctoDroid
 
 This project is for implementing E2E and functional tests.
 
